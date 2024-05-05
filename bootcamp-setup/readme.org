@@ -1,0 +1,55 @@
+#+title: Bookcamp 2020 Justin Bois
+#+author: Bartev
+#+date: 2024-05-05
+
+[[https://justinbois.github.io/bootcamp/2020_fsri/index.html]]
+
+* Setup a simple conda (minimal) environment
+
+I ran
+
+#+begin_example
+mamba create -n bootcamp
+#+end_example
+
+And this is what was installed.
+
+#+begin_example
+  Looking for: ['black', 'ipykernel', 'jupyterlab', 'numpy', 'pandas', 'pandoc', 'pip', 'pre-commit', 'pyright', 'ruff', 'seaborn']
+
+  warning  libmamba Cache file "/opt/homebrew/Caskroom/miniforge/base/pkgs/cache/a850f475.json" was modified by another program
+  warning  libmamba Cache file "/opt/homebrew/Caskroom/miniforge/base/pkgs/cache/09cdf8bf.json" was modified by another program
+  conda-forge/osx-arm64                               11.3MB @   6.3MB/s  2.0s
+  conda-forge/noarch                                  16.8MB @   7.1MB/s  2.6s
+  Transaction
+
+    Prefix: /opt/homebrew/Caskroom/miniforge/base/envs/bootcamp
+
+    Updating specs:
+
+     - black
+     - ipykernel
+     - jupyterlab
+     - numpy
+     - pandas
+     - pandoc
+     - pip
+     - pre-commit
+     - pyright
+     - ruff
+     - seaborn
+#+end_example
+
+The defaults were based upon my [[file:~/.config/conda/.condarc]] file.
+
+The suggested command did not work.
+
+#+begin_example
+  conda install -c pyviz holoviz
+#+end_example
+
+Instead, from the [[https://holoviz.org/index.html][holoviz]] website, I used,
+
+#+begin_example
+  mamba install hvplot datashader
+#+end_example

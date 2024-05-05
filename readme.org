@@ -1,0 +1,31 @@
+#+title: Learn Conda
+#+author: Bartev
+#+date: 2024-05-04
+
+* Links
+- [[https://www.youtube.com/watch?v=hDGSZMLS5F4][Miniconda / Conda for Python - Environment and Package Management]]
+- [[https://codewithsusan.com/notes/conda-python-package-and-environment-manager][Video notes from above]]
+
+*  Create an environment
+
+#+name: create-env
+#+begin_src shell :results verbatim
+  conda create --name demo
+  conda activate demo
+  conda install python
+#+end_src
+
+
+#+name: check-packages-in-env
+#+begin_src shell :results verbatim
+  conda list
+#+end_src
+
+* Some other setup
+
+From [[https://justinbois.github.io/bootcamp/2020_fsri/lessons/l00_configuring_your_computer.html]]
+
+#+begin_src shell :results verbatim
+  mamba update --all
+  mamba install -c pyviz holoviz
+#+end_src
